@@ -24,6 +24,7 @@ class ChoiceForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         instance = kwargs.get('instance')
+        # instance is obj here
         if instance:
             self.base_fields['email'].initial = 'dingman@gmai.com'
         else:
